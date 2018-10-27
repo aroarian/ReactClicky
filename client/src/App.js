@@ -128,9 +128,16 @@ componentWillMount() {
 
     if (images[index].clicked === true){
       alert("You have already clicked this")
-      }
+      this.shuffleArray(images);
+      this.forceUpdate();
+}
+      
+      
     else {
       images[index].clicked = true;
+      this.shuffleArray(images);
+
+      this.forceUpdate();
       
     }
     console.log(images[index].clicked)
@@ -146,7 +153,7 @@ componentWillMount() {
   render() {
     
     const displayImages = this.state.images.map((eachItem, index) =>
-        <img alt="click me!" onClick={() => this.handleImgClick(eachItem.id)} key={index} src={eachItem.photo}></img>
+        <img id={eachItem.id} alt="click me!" onClick={() => this.handleImgClick(eachItem.id)} key={index} src={eachItem.photo}></img>
 
     )
     return (
