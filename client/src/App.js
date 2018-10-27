@@ -94,17 +94,6 @@ class App extends React.Component {
     images: images
   }
 
-//  shuffleArray = (array) => {
-//     let i = array.length - 1;
-//     for (; i > 0; i--) {
-//       const j = Math.floor(Math.random() * (i + 1));
-//       const temp = array[i];
-//       array[i] = array[j];
-//       array[j] = temp;
-//     }
-//     return array;
-//   }
-
 shuffleArray = (array) =>{
   for (let i = array.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
@@ -121,12 +110,10 @@ componentWillMount() {
   
 
   handleImgClick = (id) => {
-    const index = (id-1)
-    console.log(id);
-    
-
-
-    if (images[index].clicked === true){
+    const image = this.state.images;
+		const imageClicked = image.filter(image => image.id === id);
+  
+    if (imageClicked[0].clicked === true){
       alert("You have already clicked this")
       this.shuffleArray(images);
       this.forceUpdate();
@@ -134,18 +121,14 @@ componentWillMount() {
       
       
     else {
-      images[index].clicked = true;
+      imageClicked[0].clicked = true;
       this.shuffleArray(images);
-
       this.forceUpdate();
       
     }
     console.log(images[index].clicked)
 
-    
-    // this.state.images.sort((a,b) => {
-    //   return 0.5 - Math.random();
-    // })
+        
     //use id to select out of the array the one i clicked
     //update clicked property to true
     //functionality to determine if true or false. if true then you have clicked it twice. if false then update to true and imcrement your score.
@@ -153,9 +136,10 @@ componentWillMount() {
   render() {
     
     const displayImages = this.state.images.map((eachItem, index) =>
-        <img id={eachItem.id} alt="click me!" onClick={() => this.handleImgClick(eachItem.id)} key={index} src={eachItem.photo}></img>
+        <img alt="click me!" onClick={() => this.handleImgClick(eachItem.id)} key={index} src={eachItem.photo}></img>
 
     )
+    
     return (
       <div className="App">
       <div className="images">
