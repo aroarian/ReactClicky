@@ -105,6 +105,21 @@ class App extends React.Component {
 //     return array;
 //   }
 
+shuffleArray = (array) =>{
+  for (let i = array.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+componentWillMount() {
+  this.shuffleArray(images);
+}
+
+
+  
+
   handleImgClick = (id) => {
     const index = (id-1)
     console.log(id);
@@ -113,11 +128,10 @@ class App extends React.Component {
 
     if (images[index].clicked === true){
       alert("You have already clicked this")
-      
-    }
+      }
     else {
       images[index].clicked = true;
-     
+      
     }
     console.log(images[index].clicked)
 
