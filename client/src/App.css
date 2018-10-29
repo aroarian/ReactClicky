@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.images{
+.images {
   width: 50%;
   margin: auto;
   display: grid;
@@ -10,25 +10,99 @@
   grid-gap: 50px;
 }
 
-img{
-width: 80%;
-padding: 13px;
-border: 3px solid black;
+img {
+  width: 80%;
+  padding: 13px;
+  border: 3px solid black;
+  transition: all 0.2s ease-in-out;
 }
 
-.nav{
+img:hover {
+  box-shadow: 0px 5px 5px rgb(92, 92, 92);
+  transform: scale(1.1);
+}
+.nav {
+  height: 75px;
+  background-color: black;
+  color: white;
+  line-height: 75px;
+}
+
+.nav h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+.nav h3 {
+  font-size: 200%;
+  float: left;
+}
+
+#score {
+  margin-right: 20px;
+}
+
+#score,
+#topscore {
+  font-size: 125%;
+  float: left;
+}
+
+.content {
+  width: 60%;
+  margin: auto;
   height: 75px;
 }
-
-.nav h2{
-  margin:0;
-  padding:0;
+.scores {
+  float: right;
+  margin: auto;
 }
 
-#score{
-  float:left;
+#rules {
+  background-color: rgb(80, 80, 80);
+  color: white;
+  font-size: 125%;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  text-align: center;
+  margin-bottom: 25px;
 }
-.scores{
- float:right;
- width: 20%;
+
+@media (max-width: 1000px) {
+  .images {
+    width: 75%;
+    grid-gap: 20px;
+  }
+
+  img {
+    padding: 4px;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .nav h3 {
+    font-size: 110%;
+  }
+
+  #rules{
+    font-size: 100%;
+  }
+  
+  #score {
+    margin-right: 10px;
+  }
+
+  #score, #topscore{
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .images {
+    width: 85%;
+  }
 }
