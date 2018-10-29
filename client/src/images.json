@@ -1,62 +1,62 @@
 [
   {
     "id": 1,
-    "photo": "../images/1.png",
+    "photo": "./images/1.png",
     "clicked": false
   },
   {
     "id": 2,
-    "photo": "img2",
+    "photo": "./images/2.png",
     "clicked": false
   },
   {
     "id": 3,
-    "photo": "img3",
+    "photo": "./images/3.png",
     "clicked": false
   },
   {
     "id": 4,
-    "photo": "img4",
+    "photo": "./images/4.png",
     "clicked": false
   },
   {
     "id": 5,
-    "photo": "img5",
+    "photo": "./images/5.png",
     "clicked": false
   },
   {
     "id": 6,
-    "photo": "img6",
+    "photo": "./images/6.png",
     "clicked": false
   },
   {
     "id": 7,
-    "photo": "img7",
+    "photo": "./images/7.png",
     "clicked": false
   },
   {
     "id": 8,
-    "photo": "img8",
+    "photo": "./images/8.png",
     "clicked": false
   },
   {
     "id": 9,
-    "photo": "img9",
+    "photo": "./images/9.png",
     "clicked": false
   },
   {
     "id": 10,
-    "photo": "img10",
+    "photo": "./images/10.png",
     "clicked": false
   },
   {
     "id": 11,
-    "photo": "img11",
+    "photo": "./images/11.png",
     "clicked": false
   },
   {
     "id": 12,
-    "photo": "img12",
+    "photo": "./images/12.png",
     "clicked": false
   }
 ]
